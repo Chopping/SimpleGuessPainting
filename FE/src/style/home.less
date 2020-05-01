@@ -1,0 +1,52 @@
+@import './func.less';
+
+.home-container {
+  .input-wrapper {
+    margin: 30px 0 20px 0;
+    display: flex;
+    justify-content: center;
+    .rule_tip {
+      color:#f44336; // 修改提示性文字的显示颜色 xb
+    }
+  }
+
+  .room-list-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    .tip {
+      margin: 60px;
+      color:#655d5d; // 修改提示性文字的显示颜色 xb
+    }
+    .room-item {
+      width: 220px;
+      height: 110px;
+      padding: 15px;
+      margin: 15px;
+      // background: #fff;
+      background:#f4756b;
+      border: 1px solid #ececec;
+      border-radius: 4px;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+
+      &:hover {
+        box-shadow: 0 0 8px 3px rgba(0,0,0,.05);
+      }
+    }
+  }
+
+  .footer-wrapper{
+    margin: 30px 50px 20px 50px;
+    display: flex;
+    justify-content: left;
+    border: solid 2px;
+    border-color: #655d5d;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+  }
+}

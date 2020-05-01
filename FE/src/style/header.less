@@ -1,0 +1,46 @@
+@import './theme.less';
+
+.fixed-header {
+  display: grid;
+  grid-template-columns: 300px auto 300px;
+  grid-template-rows: auto;
+  background: @navigator-color;
+  box-sizing: border-box;
+  color: #fff;
+  height: 60px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  .room-name {
+    font-weight: bold;
+  }
+  padding: 5px 20px;
+  .item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    &.left {
+      grid-area: ~"1 / 1 / 2 / 2";
+      justify-content: flex-start;
+    }
+    &.right {
+      grid-area: ~"1 / 3 / 2 / 4";
+      justify-content: flex-end;
+      .input {
+        margin-right: 5px;
+      }
+    }
+  }
+  .wifi {
+      stroke-width: 3;
+      stroke: #fff;
+  }
+  #icon-people {
+    fill: #000 !important;
+    path {
+      fill: #000 !important;
+    }
+  }
+}

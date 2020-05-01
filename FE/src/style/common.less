@@ -1,0 +1,190 @@
+@import './theme.less';
+@import './func.less';
+// base style
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+html {
+  font-size: 16px;
+  color: @text-color;
+  background: @gray-back; // 修改背景颜色 xb
+  height: 100%;
+}
+body {
+  box-sizing: border-box;
+  padding-top: 60px;
+  height: 100%;
+}
+#app {
+  width: 100%;
+  height: 100%;
+  > section {
+    width: 100%;
+    height: 100%;
+  }
+}
+// iconfont
+.icon {
+  width: 1em; height: 1em;
+  vertical-align: -0.15em;
+  fill: currentColor;
+  overflow: hidden;
+}
+.icon-wrapper {
+  display: inline-block;
+  margin-right: 5px;
+  font-size: 20px;
+}
+
+// color
+.alert-color {
+  color: @alert-color;
+}
+
+.warning-color {
+  color: @warning-color;
+}
+
+.info-color {
+  color: @info-color;
+}
+
+.success-color {
+  color: @success-color;
+}
+
+// common
+
+.clickable{
+  cursor: pointer;
+}
+.icon {
+  &.clickable {
+    opacity: .8;
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+.input {
+  border-radius: 4px;
+  display: inline-block;
+  &.input-default {
+    border: 1px solid #ccc;
+    background: #fff;
+    &:focus {
+      border-color: @info-color;
+    }
+  }
+  &.input-white {
+    border: 1px solid #ccc;
+    background: #fff;
+    &:focus {
+      border-color: #fff;
+    }
+  }
+
+  &.input-md {
+    font-size: 16px;
+    line-height: 28px;
+    padding: 0 6px;
+  }
+
+  &.input-lg {
+    font-size: 20px;
+    line-height: 34px;
+    padding: 0 10px;
+  }
+}
+
+.btn {
+  cursor: pointer;
+  display: inline-block;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 4px;
+  &.disabled {
+    border-color: #ccc !important;
+    background: #ccc !important;
+    color: #fff !important;
+    cursor: not-allowed !important;
+  }
+  &.btn-default {
+    border-color: @info-color;
+    background: @info-color;
+    color: #fff;
+    &:hover {
+      border-color: @info-color-hover;
+      background: @info-color-hover;
+    }
+    &:active {
+      border-color: @info-color-active;
+      background: @info-color-active;
+    }
+  }
+  &.btn-white {
+    color: rgba(0, 0, 0, 0.65);
+    background-color: #fff;
+    border-color: #d9d9d9;
+    &:hover {
+      color: @info-color-hover;
+      border-color: @info-color-hover;
+    }
+    &:active {
+      color: @info-color-active;
+      border-color: @info-color-active;
+    }
+  }
+  &.btn-md {
+    font-size: 16px;
+    line-height: 28px;
+    padding: 0 6px;
+  }
+  &.btn-lg {
+    font-size: 20px;
+    line-height: 34px;
+    padding: 0 10px;
+  }
+}
+
+.input-group {
+  &.input-btn {
+    > .input {
+      border-radius: 4px 0 0 4px;
+    }
+    > .btn {
+      border-radius: 0 4px 4px 0;
+    }
+  }
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  .key {
+    color: black;
+    margin-right: 6px;
+    font-size: 12px;
+    text-align: right;
+    width: 24%;
+  }
+  .value {
+    width: 76%;
+    .ellipsis();
+  }
+}
+
+
+
+
