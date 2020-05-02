@@ -2,6 +2,7 @@
 /server/node_modules
 /FE/.idea
 /FE/node_modules
+/FE/dist
 
 # Logs
 logs
