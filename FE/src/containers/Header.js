@@ -65,7 +65,7 @@ export default class Header extends Component {
                     </span>
                     <span>
                         { type === 'room'
-                            ? <span>房间：<span className="room-name">{ title }</span></span>
+                            ? <span>Room：<span className="room-name">{ title }</span></span>
                             : <span>{ title }</span> }
                     </span>
                 </div>

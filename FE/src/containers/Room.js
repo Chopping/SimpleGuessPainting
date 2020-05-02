@@ -22,7 +22,7 @@ const renderMessageList = (messageList) => {
                             return (
                                 <div className="message" key={message.timestamp + message.type}>
                                     <div className="info system">
-                                        <span className="by">{ getPersonName(message.by) } { {'enter': '进入房间', 'leave': '离开房间'}[message.type] }</span>
+                                        <span className="by">{ getPersonName(message.by) } { {'enter': 'join this room', 'leave': 'leave this room'}[message.type] }</span>
                                     </div>
                                 </div>
                             );
@@ -30,7 +30,7 @@ const renderMessageList = (messageList) => {
                             return (
                                 <div className="message" key={message.timestamp}>
                                     <div className="info system">
-                                        <span className="by">{ message.content.old.name } 改名为 { message.content.info.name }</span>
+                                        <span className="by">{ message.content.old.name } change his/her name with { message.content.info.name }</span>
                                     </div>
                                 </div>
                             );
@@ -96,8 +96,8 @@ export default class Room extends Component {
                         <Game key="game" />
                     </section>
                     <section className="people-block">
-                        <div title="房主">
-                            <span>{ getPersonName(owner) }<span className="host-marker">(房主)</span></span>
+                        <div title="Game Room Creator">
+                            <span>{ getPersonName(owner) }<span className="host-marker">(Creator)</span></span>
                         </div>
                         <div>
                             {
@@ -122,7 +122,7 @@ export default class Room extends Component {
                         <section className="input-wrapper input-group input-btn">
                             <input
                                 className="input input-default input-md"
-                                placeholder="请输入内容"
+                                placeholder="input your answer..."
                                 value={this.state.messageInputValue}
                                 onChange={
                                     e => {

@@ -53,7 +53,7 @@ export default class Game extends Component {
         return (
             <section className="game-wrapper">
                 <section className="game-info">
-                    <div className="tip">{ {pending: '等待下个回合', going: '进行中', await: '等待房主开始游戏'}[status] }</div>
+                    <div className="tip">{ {pending: 'Loading for next round', going: 'Gaming', await: 'Wait for game starting'}[status] }</div>
 
 
                     {
@@ -61,16 +61,16 @@ export default class Game extends Component {
                         ? null
                         : [
                             <div key='word' className="row">
-                                <span className="key">目标词语</span>
+                                <span className="key">Target idiom</span>
                                 <span className="value key-word">{ word || '?' }</span>
                             </div>,
                             <div key="time" className="row">
-                                <span className="key">{{'pending': '下个回合', 'going': '剩余时间'}[status]}</span>
+                                <span className="key">{{'pending': 'next round', 'going': 'timer'}[status]}</span>
 
                                 <span className="value">{ countDown || '' }</span>
                             </div>,
                             <div key="host" className="row">
-                                <span className="key">庄家(此轮绘画的玩家)</span>
+                                <span className="key">Banker(Painter for this round)</span>
                                 <span className="value">{ getPersonName(banker) }</span>
                             </div>
                           ]
@@ -86,13 +86,13 @@ export default class Game extends Component {
                     <div className="rank-wrapper">
                         <div key={''} className="table-row">
                             <span className="rank">
-                                排名
+                                Rank List
                             </span>
                             <span className="name">
-                                玩家
+                                Player
                             </span>
                             <span className="score">
-                                积分
+                                Score
                             </span>
                         </div>
                         { renderRankings(players) }
@@ -126,7 +126,7 @@ export default class Game extends Component {
                              {/*onClick={() => {this.syncStroke({ type: 'mode', mode: 'eraser' });}}>*/}
                         {/*</div>*/}
                         <div className={`color-brush eraser`}
-                             title="撤销"
+                             title="withdraw"
                              onClick={() => {this.syncStroke({ type: 'revoke' });}}>
                         </div>
                     </div>

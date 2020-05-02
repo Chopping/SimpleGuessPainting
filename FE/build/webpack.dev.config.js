@@ -7,8 +7,8 @@ module.exports = Object.assign(baseConfig, {
     devServer: {
         hot: true,
         inline: true,
-        open: true,
-        openPage: ''
+        // open: true,
+        // openPage: ''
     },
     plugins: (baseConfig.plugins || []).concat([
         new HtmlWebpackPlugin({
