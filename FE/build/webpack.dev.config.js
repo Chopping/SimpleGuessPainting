@@ -16,6 +16,7 @@ module.exports = Object.assign(baseConfig, {
                 pathRewrite: {
                     '^/proxy': ''
                 }
+            }
         }
     },
     plugins: (baseConfig.plugins || []).concat([
