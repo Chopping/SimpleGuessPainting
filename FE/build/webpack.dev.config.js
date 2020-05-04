@@ -11,8 +11,8 @@ module.exports = Object.assign(baseConfig, {
         // openPage: ''
         proxy: {
             '/proxy': {
-                target: 'http://your_api_server.com',
-                changeOrigin: true,
+                //target: 'http://your_api_server.com',
+                // changeOrigin: true,
                 pathRewrite: {
                     '^/proxy': ''
                 }
