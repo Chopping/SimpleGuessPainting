@@ -83,6 +83,7 @@ export default class Home extends Component {
                             1. Player can modify his/her player name by clicking on the name text and input a new name.<br/>
                             2. Player can join a exist room or create a new game room and paly with others.<br/>
                             3. Owner of game room cannot start Game unless there are more than 1 player in room.<br/>
+                            4. Bystanders of a starting game cannot participate in the ranking of game.<br/>
                         </p>
                     </section>
                 </section>

@@ -79,7 +79,7 @@ export default class Game extends Component {
                     {
                         status === 'await' && isRoomOwner ?
                             <div className="starter">
-                                <span className="btn btn-default btn-md" onClick={ wsAction.startGame }>开始游戏</span>
+                                <span className="btn btn-default btn-md" onClick={ wsAction.startGame }>Start Game</span>
                             </div>
                             : null
                     }

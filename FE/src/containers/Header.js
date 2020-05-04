@@ -120,8 +120,8 @@ export default class Header extends Component {
                                 ]
                             )
                             : (
-                                <div title="点击修改昵称" className="clickable">
-                                    <span>Player: </span>
+                                <div title="Click it to modify your name" className="clickable">
+                                    <span>Player Name: </span>
                                     <span className="icon-wrapper">
                                         <svg style={{stroke: "#fff", fill: "#fff"}} className="icon" aria-hidden="true">
                                             <use xlinkHref="#icon-people"></use>
