@@ -9,6 +9,14 @@ module.exports = Object.assign(baseConfig, {
         inline: true,
         // open: true,
         // openPage: ''
+        proxy: {
+            '/proxy': {
+                target: 'http://your_api_server.com',
+                changeOrigin: true,
+                pathRewrite: {
+                    '^/proxy': ''
+                }
+        }
     },
     plugins: (baseConfig.plugins || []).concat([
         new HtmlWebpackPlugin({
